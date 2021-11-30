@@ -1,0 +1,239 @@
+body {
+    height: 100%;
+    background-color: lightsteelblue;
+}
+  
+* {
+    box-sizing:border-box;
+    padding: 2px;
+    margin: 0%;
+}
+
+/* ---------------------------------------Digital clock block ------------------------------------------------ */
+
+/* box for digital clock */
+#box {
+    background-color: rgba(255, 255, 255, 0.6); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+    position: absolute;
+    border-radius: 15px;
+    top: 13%;
+    left: 32%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    width: 30%;
+    min-width: 350px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* main time heading display */
+p{
+    font-size: 40px;
+    font-family: sans-serif;
+    width: 120%;
+    border: 2px solid #f1f1f1;
+    transform: translate(-8%, 0%);
+    background-color: black;
+    border-radius: 10px;
+    z-index: 3;
+    padding: 5px;
+}
+
+#mili{
+    font-size: 24px;
+}
+
+/* start stop restart buttons */
+#buttons button {
+    background: linear-gradient(0deg,rgba(71, 153, 71,1) 0%, rgba(111, 168, 182, 0.548) 100%);
+    border: black solid 1px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 40px 10px 0px;
+    color: whitesmoke;
+}
+#buttons button span {
+    position: relative;
+    display: block;
+}
+#buttons button:hover{
+    background: rgb(64, 131, 64);
+    padding: 10px;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+
+
+/* --------------------------------------------Lap List div------------------------------------------------------- */
+#laps-list{
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    z-index: 2;
+    padding: 20px;
+    /* background-color: red; */
+    border-radius: 25px;
+}
+
+
+/* lap button  */
+#lap{
+    border-radius: 25px;
+    font-size: 25px;
+    width: 100px;
+    padding: 8px;
+    margin-left: 145px;
+    background-color:rgb(18, 18, 43);
+    border: white 2px solid;
+    color: whitesmoke;
+}
+
+
+/* flex to hold all laps  */
+#flex{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 20px;
+    height: 70vh;
+}
+
+/* lap items */
+.lap-item{
+    background-color: rgb(233, 222, 222);
+    border-radius: 20px;
+    padding: 2px 50px;
+    margin-top: 2px;
+}
+
+/* lap spans */
+#flex span{
+    font-size: 25px;
+      
+}
+.times{
+    margin-left: 80px;
+}
+
+/* Stop time display part */
+
+.stoptime_display {
+    width: 20%;
+    margin-top: 6%;
+    overflow-y: auto;
+    margin-left: 5%;
+    background-color: rgb(180, 180, 223);
+    border-radius: 10px;
+}
+
+h1{
+    color:black;
+    /* background-color: rgb(113, 113, 168); */
+    /* margin-left: 20%; */
+    text-align: center;
+    margin-left: 5px;
+}
+ul {
+    width: 100%;
+    height: 100%;
+    /* top: 10%; */
+}
+
+ul,
+li {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+li:first-child {
+    margin-top: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 5px ;
+    background-color: #f1ebdc;
+    /* padding: 10px; */
+    padding-left: 35px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+/* Ends here */
+
+/* CSS for screen size less 450px */
+
+@media only screen and (max-width:450px){
+
+   /* Hide the Stop time display for small screens */
+    .stoptime_display{
+        display: none;
+    }
+    /* digital clock box  */
+    #box {
+        left: 50%;
+        min-width: 300px;
+        padding: 10px;
+        transform: translate(-50%, 0%);
+    }
+    
+    h1{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* buttons  */
+    #buttons button {
+        width: 70px;
+        height: 30px;
+        margin: 10px 5px 0px;
+        font-size: 10px;
+    }
+
+    /* lap list */
+    #laps-list{
+        top: 50%;
+        left: 50%;
+        width: 350px;
+        transform: translate(-50%, 0%);
+        padding: 5px;
+        border-radius: 25px;
+    }
+    
+    /* lap buttons */
+    #lap{
+        border-radius: 25px;
+        font-size: 12px;
+        width: 80px;
+        padding: 2px;
+        margin-left: 130px;
+    }
+    
+
+    /* flex for laps  */
+    #flex{
+        padding: 10px;
+        height: 35vh;
+    }
+    
+    .lap-item{
+        border-radius: 10px;
+        padding: 2px 30px;
+        margin-top: 2px;
+    }
+
+    #flex span{
+        font-size: 15px;
+    }
+
+    .times{
+        margin-left: 100px;
+    }
+
+}

@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- added css file  -->
+    <link rel="stylesheet" href="./Css/style.css">
+
+    <!-- added favicon icon -->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOUOfw7I1lZ6Vsu5TpdBgvH6fByIC5rsfb5Q&usqp=CAU" type="image/x-icon" >
+    <title>Stop Watch</title>
+</head>
+<body>
+
+    <!-- background image -->
+    <!-- <div id="background"></div> -->
+
+    <!-- digital clock block  -->
+    <div id="box" >
+
+        <!-- time dispaly heading  -->
+        <p id="time">
+            <span id="hour">00</span> :
+            <span id="minutes">00</span> :
+            <span id="seconds">00</span> :
+            <span id="miliSeconds">00</span>
+        </p>
+
+        <!-- start stop restart button  -->
+        <div id="buttons">
+            <button id="start"><span>START</span></button>
+            <button id="stop"><span>STOP</span></button>
+            <button id="restart"><span>RESET</span></button>
+        </div>
+    </div>
+
+    <!-- div for laps  -->
+    <div id="laps-list">
+        <button id="lap"><span>Lap</span></button>
+        <div id="flex">            
+        </div>
+    </div>
+
+    <!-- stop time display -->
+    <div class="stoptime_display">
+        <h1><u>Stop Time</u> </h1>
+        <ul id="time_list"></ul>
+    </div>
+
+    <script src="./Js/index.js"></script>
+    
+</body>
+</html>
